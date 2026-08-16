@@ -1,0 +1,8 @@
+Processed Telco Customer Churn Dataset
+This dataset is the machine-learning-ready version of the original Telco Customer Churn dataset. 
+It has undergone data cleaning, data type correction, missing-value treatment, feature engineering, outlier detection, feature selection, categorical encoding, and numerical feature scaling.
+The customerID identifier and the highly redundant AverageMonthlySpend feature were removed during preprocessing. 
+A new TotalServices feature was created to represent the number of additional services subscribed to by each customer. 
+Categorical variables were converted into numerical form using one-hot encoding, while selected numerical features were standardized using StandardScaler. 
+The target variable, Churn, is represented numerically as 0 (No) and 1 (Yes). 
+The resulting dataset is prepared for subsequent machine-learning model development.
