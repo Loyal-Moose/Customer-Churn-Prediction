@@ -140,3 +140,138 @@ AnalystLab Africa Machine Learning Internship Programme
 
 📌 Note
 This repository represents the work completed for Week 1 of the AnalystLab Africa Machine Learning Internship Programme. The focus of this stage is business understanding, data understanding, exploratory analysis, problem framing, and machine learning planning.
+
+
+Customer Churn Prediction — Week 2
+
+Project Overview
+
+This project is part of the AnalystLab Africa Machine Learning Internship Programme – Week 2.
+
+The project focuses on Data Preprocessing and Feature Engineering using the Telco Customer Churn dataset. The objective is to transform the raw customer data into a clean and machine-learning-ready dataset for subsequent model development.
+
+Business Problem
+
+Customer churn is an important business problem for telecommunications companies because losing existing customers can negatively affect revenue and customer retention.
+
+The goal of this project is to prepare customer data for a future machine learning model that will predict whether a customer is likely to churn.
+
+Dataset
+
+The project uses the Telco Customer Churn Dataset containing information about customers, their subscribed services, contract details, payment methods, charges, and churn status.
+
+The target variable is:
+
+- Churn — whether the customer left the company ("Yes"/"No").
+
+Week 2 Objectives
+
+The preprocessing workflow focuses on:
+
+- Inspecting the dataset and identifying data-quality issues
+- Handling missing values
+- Validating and correcting data types
+- Checking duplicate records
+- Removing irrelevant features
+- Engineering meaningful features
+- Detecting potential outliers
+- Selecting relevant features
+- Encoding categorical variables
+- Scaling numerical features
+- Producing a machine-learning-ready dataset
+
+Data Preprocessing
+
+The following preprocessing steps were performed:
+
+Missing Values
+
+The "TotalCharges" column contained 11 missing values. Investigation showed that the affected customers had zero tenure. The missing values were therefore treated as zero after converting the column to a numerical data type.
+
+Duplicate Records
+
+The dataset was checked for duplicate records and duplicate customer identifiers. No duplicate customer IDs were identified.
+
+Irrelevant Features
+
+The "customerID" column was removed because it is an identifier and does not provide meaningful predictive information.
+
+Feature Engineering
+
+A new feature called "TotalServices" was created by counting the number of additional services subscribed to by each customer.
+
+An "AverageMonthlySpend" feature was also explored. However, correlation analysis showed an extremely high correlation with "MonthlyCharges", so it was removed to reduce redundancy.
+
+Outlier Detection
+
+Numerical variables were examined using box plots and the Interquartile Range (IQR) method.
+
+No potential outliers were detected, so no outlier removal or transformation was applied.
+
+Feature Selection
+
+Correlation analysis was used to examine relationships among numerical features. Constant-column analysis was also performed, and no constant features were identified.
+
+Categorical Encoding
+
+Categorical input features were converted into numerical variables using One-Hot Encoding.
+
+The target variable "Churn" was converted to:
+
+- "0" = No
+- "1" = Yes
+
+Feature Scaling
+
+"StandardScaler" was used to standardize the numerical features so that they have approximately a mean of 0 and a standard deviation of 1.
+
+The binary one-hot encoded variables remain represented as 0 and 1.
+
+Project Structure
+
+Customer-Churn-Prediction/
+│
+├── README.md
+├── .gitignore
+├── requirements.txt
+│
+├── data/
+│   └── original dataset
+│
+├── notebooks/
+│   └── Customer_Churn_Preprocessing.ipynb
+│
+├── reports/
+│   ├── Business_Understanding_Report.pdf
+│   └── Data_Preprocessing_Report.pdf
+│
+└── processed_data/
+    └── processed_telco_customer_churn.csv
+
+Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Jupyter Notebook
+- Kaggle Notebook
+
+Key Learning Outcomes
+
+This project provided practical experience in preparing real-world data for machine learning. Key areas covered include data cleaning, missing-value treatment, feature engineering, categorical encoding, feature scaling, outlier detection, and feature selection.
+
+Project Status
+
+Week 2 — Data Preprocessing & Feature Engineering: Completed
+
+The processed dataset is prepared for the next stage of the machine learning workflow: model development and evaluation.
+
+Author
+
+Ojo Olaife
+
+Machine Learning Intern
+AnalystLab Africa Machine Learning Internship Programme
