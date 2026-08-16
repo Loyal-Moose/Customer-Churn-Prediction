@@ -142,7 +142,7 @@ AnalystLab Africa Machine Learning Internship Programme
 This repository represents the work completed for Week 1 of the AnalystLab Africa Machine Learning Internship Programme. The focus of this stage is business understanding, data understanding, exploratory analysis, problem framing, and machine learning planning.
 
 
-Customer Churn Prediction — Week 2
+# Customer Churn Prediction — Week 2
 
 Project Overview
 
