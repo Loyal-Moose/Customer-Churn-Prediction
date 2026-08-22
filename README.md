@@ -273,5 +273,307 @@ Author
 
 Ojo Olaife
 
+# Customer Churn Prediction — Week 3 Machine Learning Project
+
+## Project Overview
+
+This project focuses on developing machine learning classification models to predict customer churn using a telecommunications customer dataset.
+
+The project builds on the data understanding and preprocessing work completed in Week 2. In Week 3, the processed dataset was used to train, evaluate, and compare multiple machine learning models and identify the model most suitable for predicting customers who are likely to churn.
+
+The project also includes feature-importance analysis and business recommendations based on the modelling results.
+
+---
+
+## Business Problem
+
+Customer churn is an important business problem because losing existing customers can reduce revenue and increase the cost of acquiring new customers.
+
+The objective of this project is to develop a machine learning model that can identify customers who are likely to churn so that the business can prioritize appropriate customer-retention strategies.
+
+### Business Objective
+
+The main objectives are to:
+
+- Predict whether a customer is likely to churn.
+- Compare different classification algorithms.
+- Evaluate model performance using appropriate classification metrics.
+- Identify the most important predictors of customer churn.
+- Recommend a suitable model for the churn-prediction problem.
+- Provide business insights that can support customer-retention decisions.
+
+---
+
+## Dataset
+
+The project uses the Telco Customer Churn dataset.
+
+The processed dataset contains:
+
+- **7,043 observations**
+- **32 features**
+- **Churn** as the target variable
+
+The target variable is binary:
+
+| Churn | Description |
+|---|---|
+| 0 | Customer did not churn |
+| 1 | Customer churned |
+
+### Target Distribution
+
+| Class | Count | Percentage |
+|---|---:|---:|
+| No Churn | 5,174 | 73.46% |
+| Churn | 1,869 | 26.54% |
+
+The target variable is therefore imbalanced, with non-churn customers representing the majority of observations.
+
+---
+
+## Project Workflow
+
+The Week 3 workflow followed these major stages:
+
+1. Load the processed dataset
+2. Inspect the dataset
+3. Separate features and target
+4. Split the data into training and testing sets
+5. Train classification models
+6. Generate predictions
+7. Evaluate model performance
+8. Compare the models
+9. Analyse feature importance
+10. Generate business insights
+11. Select the preferred model
+12. Develop recommendations and next steps
+
+---
+
+## Machine Learning Algorithms
+
+Four classification algorithms were evaluated:
+
+### 1. Logistic Regression
+
+Logistic Regression was used as a baseline classification model.
+
+### 2. Decision Tree
+
+Decision Tree was used to model nonlinear relationships through a tree-based structure.
+
+### 3. Random Forest
+
+Random Forest combines multiple decision trees to produce a more robust prediction.
+
+### 4. XGBoost
+
+XGBoost is a gradient-boosting algorithm that builds an ensemble of decision trees sequentially to improve predictive performance.
+
+---
+
+## Model Evaluation
+
+The models were evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- ROC-AUC
+
+Recall and ROC-AUC were given particular attention because the business objective involves identifying customers who are likely to churn.
+
+### Model Performance
+
+| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
+|---|---:|---:|---:|---:|---:|
+| XGBoost | 0.7424 | 0.5092 | **0.8102** | **0.6254** | **0.8430** |
+| Logistic Regression | 0.7381 | 0.5043 | 0.7834 | 0.6136 | 0.8417 |
+| Random Forest | **0.7821** | **0.6184** | 0.4679 | 0.5327 | 0.8222 |
+| Decision Tree | 0.7360 | 0.5026 | 0.5080 | 0.5053 | 0.6637 |
+
+### Model Selection
+
+XGBoost was selected as the preferred model because it achieved:
+
+- The highest **Recall: 0.8102**
+- The highest **F1 Score: 0.6254**
+- The highest **ROC-AUC: 0.8430**
+
+Although Random Forest achieved higher Accuracy and Precision, its Recall was considerably lower.
+
+For a customer-retention problem, identifying a larger proportion of actual churners is important because failing to identify an at-risk customer may result in a lost retention opportunity.
+
+---
+
+## Feature Importance
+
+Feature importance was analysed for both Random Forest and XGBoost.
+
+### Random Forest — Top 10 Features
+
+| Rank | Feature | Importance |
+|---:|---|---:|
+| 1 | TotalCharges | 0.174278 |
+| 2 | tenure | 0.157923 |
+| 3 | MonthlyCharges | 0.145814 |
+| 4 | Contract_Two year | 0.061937 |
+| 5 | InternetService_Fiber optic | 0.044022 |
+| 6 | PaymentMethod_Electronic check | 0.037899 |
+| 7 | TotalServices | 0.037482 |
+| 8 | Contract_One year | 0.027158 |
+| 9 | gender_Male | 0.025196 |
+| 10 | PaperlessBilling_Yes | 0.023981 |
+
+### XGBoost — Top 10 Features
+
+| Rank | Feature | Importance |
+|---:|---|---:|
+| 1 | Contract_Two year | 0.363767 |
+| 2 | Contract_One year | 0.178733 |
+| 3 | InternetService_Fiber optic | 0.119743 |
+| 4 | InternetService_No | 0.075932 |
+| 5 | PaymentMethod_Electronic check | 0.040388 |
+| 6 | StreamingMovies_Yes | 0.036806 |
+| 7 | tenure | 0.036159 |
+| 8 | OnlineSecurity_Yes | 0.026336 |
+| 9 | PaperlessBilling_Yes | 0.018009 |
+| 10 | StreamingTV_Yes | 0.011147 |
+
+### Key Feature-Importance Findings
+
+Several predictors appeared as important across the tree-based models, including:
+
+- Contract type
+- Internet service
+- Tenure
+- Payment method
+- Paperless billing
+- Customer charges
+
+XGBoost placed particularly strong importance on contract-related variables, while Random Forest placed greater importance on TotalCharges, tenure, and MonthlyCharges.
+
+Feature importance represents predictive contribution and should not be interpreted as proof of causation.
+
+---
+
+## Statistical Findings
+
+The processed dataset was also examined statistically.
+
+### Descriptive Statistics
+
+| Variable | Mean | Standard Deviation | Minimum | Maximum |
+|---|---:|---:|---:|---:|
+| SeniorCitizen | 0.1621 | 0.3686 | 0 | 1 |
+| tenure | 32.3711 | 24.5595 | 0 | 72 |
+| MonthlyCharges | 64.7617 | 30.0900 | 18.25 | 118.75 |
+| TotalCharges | 2279.7343 | 2266.7945 | 0 | 8684.80 |
+
+### Correlation Analysis
+
+The correlation between:
+
+- **tenure and TotalCharges:** 0.8262
+- **MonthlyCharges and TotalCharges:** 0.6512
+
+The strong positive relationship between tenure and TotalCharges is expected because customers who remain with the company for longer periods have more time to accumulate charges.
+
+---
+
+## Business Insights
+
+The modelling and statistical analysis provide several useful business insights:
+
+1. **Contract type is an important predictor of churn.**  
+   Contract-related variables were particularly important in the XGBoost model.
+
+2. **Internet service is an important predictive factor.**  
+   InternetService_Fiber optic and InternetService_No were among XGBoost's strongest predictors.
+
+3. **Customer tenure is important.**  
+   Tenure was one of the leading predictors in both tree-based models.
+
+4. **Charges contain useful predictive information.**  
+   TotalCharges and MonthlyCharges were particularly important to Random Forest.
+
+5. **Payment method may be relevant to churn risk.**  
+   Electronic check was among the important predictors in both models.
+
+---
+
+## Business Recommendations
+
+Based on the modelling results, the following actions are recommended:
+
+- Use the XGBoost model to identify customers with elevated churn risk.
+- Prioritize retention campaigns for high-risk customers.
+- Investigate customers based on contract type and consider strategies that encourage longer-term contracts.
+- Examine the customer experience associated with important internet-service segments.
+- Investigate electronic-check customers for possible billing or payment-related issues.
+- Combine predicted churn risk with customer value when prioritizing retention activities.
+- Monitor model performance regularly after deployment.
+
+---
+
+## Limitations
+
+Several limitations should be considered:
+
+- The dataset contains an imbalanced target variable.
+- Model performance is based on the available dataset and test data.
+- Feature importance does not establish causal relationships.
+- The model should be validated on new data before being used in a production environment.
+- Business intervention thresholds should consider the cost of retention campaigns and the value of customers.
+
+---
+
+## Technologies Used
+
+The project was developed using Python and common machine learning and data-analysis libraries.
+
+### Tools and Libraries
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- XGBoost
+- Jupyter Notebook / Kaggle Notebook
+
+---
+
+## Project Structure
+
+```text
+week-3-customer-churn/
+│
+├── data/
+│   └── processed_dataset.csv
+│
+├── notebooks/
+│   └── week3_modeling.ipynb
+│
+├── reports/
+│   ├── Business_Insights_Report.pdf
+│   ├── Model_Evaluation_Report.pdf
+│   ├── Feature_Importance_Report.pdf
+│   └── Statistical_Analysis_Report.pdf
+│
+├── visualizations/
+│   ├── model_performance.png
+│   ├── roc_curves.png
+│   └── feature_importance_comparison.png
+│
+├── README.md
+└── requirements.txt
 Machine Learning Intern
 AnalystLab Africa Machine Learning Internship Programme
+
+OJO OLAIFE OLUWAPONMILE
+Machine Learning / Data Science Student
+Week 3 Machine Learning Internship Project
