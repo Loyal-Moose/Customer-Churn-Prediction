@@ -546,10 +546,8 @@ The project was developed using Python and common machine learning and data-anal
 - Jupyter Notebook / Kaggle Notebook
 
 ---
-
-## Project Structure
-
-```text
+Project Structure
+text
 week-3-customer-churn/
 │
 ├── data/
@@ -571,13 +569,35 @@ week-3-customer-churn/
 │
 ├── README.md
 └── requirements.txt
+
 Machine Learning Intern
 AnalystLab Africa Machine Learning Internship Programme
 
-OJO OLAIFE OLUWAPONMILE
+OJO OLAIFE OLUWAPONMILE 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 
 # HealthConnect — Week 4: ML Problem Definition
 ## Project Overview
 This project is part of the AnalystLab Africa Machine Learning Internship – Week 4 Experience Lab.
@@ -715,3 +735,4 @@ Machine Learning / Data Science Student
 Week 4  Machine Learning Internship Project
 
 https://drive.google.com/file/d/1kLBU6VsEy5RsQzm0HUcD15ANp897XcWe/view?usp=drivesdk
+
