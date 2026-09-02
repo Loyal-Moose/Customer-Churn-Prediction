@@ -575,5 +575,143 @@ Machine Learning Intern
 AnalystLab Africa Machine Learning Internship Programme
 
 OJO OLAIFE OLUWAPONMILE
+
+
+
+# HealthConnect — Week 4: ML Problem Definition
+## Project Overview
+This project is part of the AnalystLab Africa Machine Learning Internship – Week 4 Experience Lab.
+The project focuses on HealthConnect, a healthcare appointment system aimed at improving patient appointment attendance and healthcare support using data and artificial intelligence.
+The Week 4 task focuses on understanding the healthcare appointment problem, examining the available data, and determining whether the dataset can support a machine learning solution for predicting appointment no-shows.
+## Business Problem
+Missed healthcare appointments can affect the effective use of available appointment slots and may create challenges in healthcare service delivery.
+HealthConnect therefore seeks to understand patterns associated with appointment attendance and determine whether patient and appointment information can be used to identify appointments that are at risk of becoming no-shows.
+A machine learning solution could eventually help healthcare teams identify higher-risk appointments and support better appointment management.
+## Project Objective
+The main objective of this project is to:
+1. Understand the HealthConnect appointment business problem.
+2. Inspect and understand the available appointment data.
+3. Identify the potential machine learning target variable.
+4. Examine the features that may be useful for prediction.
+5. Assess data quality and potential modelling challenges.
+6. Define an appropriate machine learning problem.
+7. Propose a suitable modelling approach for future development.
+## Dataset
+The project uses the HealthConnect Appointment Dataset.
+The dataset contains:
+5,000 appointment records
+18 columns
+Each record represents an individual healthcare appointment and contains information relating to patients, appointment scheduling, and appointment outcomes.
+The main outcome variable of interest is:
+appointment_outcome
+which records appointment outcomes such as:
+Attended
+No-Show
+Cancelled
+For the proposed machine learning problem, No-Show is the primary outcome of interest.
+Machine Learning Problem
+The proposed machine learning problem is a classification problem.
+Target
+The model will aim to predict whether an appointment is likely to result in a No-Show.
+Proposed Target Definition
+For the modelling stage, the outcome can be formulated as:
+1 → No-Show
+0 → Attended
+Cancelled appointments will require separate consideration during the modelling stage based on the project requirements and data-handling decisions.
+## Proposed ML Workflow
+The planned machine learning workflow is:
+HealthConnect Data
+        ↓
+Data Ingestion
+        ↓
+Data Validation & Inspection
+        ↓
+Data Cleaning
+        ↓
+Feature Engineering
+        ↓
+Target & Feature Definition
+        ↓
+Feature Selection
+        ↓
+Train/Test Split
+        ↓
+Preprocessing Pipeline
+        ↓
+Model Training
+        ↓
+Model Evaluation
+        ↓
+Model Comparison
+        ↓
+No-Show Risk Prediction
+        ↓
+Future Operational Use
+
+## Technologies
+The project will primarily use Python and common data science and machine learning libraries, including:
+Python
+Pandas
+NumPy
+Matplotlib
+Seaborn
+Scikit-learn
+Jupyter Notebook / Kaggle Notebook
+Additional machine learning libraries may be introduced during later modelling stages where appropriate.
+
+## Week 4 Scope
+This week's work focuses on problem definition and data understanding, rather than completing the final predictive model.
+The major activities include:
+Business understanding
+Dataset inspection
+Target variable analysis
+Feature review
+Data quality assessment
+Machine learning problem definition
+Proposed modelling approach
+Identification of assumptions, risks, and dependencies
+
+
+## Expected Outcome
+At the end of Week 4, the project should provide a clear understanding of:
+The healthcare business problem.
+The proposed machine learning problem.
+The prediction target.
+Potential predictive features.
+Data quality considerations.
+The proposed modelling workflow.
+Requirements and considerations for the next stage of development.
+
+
+Project Structure
+Week-4-HealthConnect/
+│
+├── notebooks/
+│   └── HealthConnect_Week4_ML_Problem_Definition.ipynb
+│
+├── data/
+│   └── README.md
+│
+├── reports/
+│   ├── Business_Understanding_Report.pdf
+│   └── ML_Problem_Definition.pdf
+│
+├── images/
+│   └── ...
+│
+└── README.md
+
+Note: The raw HealthConnect dataset and data dictionary should not be uploaded to a public GitHub repository unless their sharing permissions explicitly allow redistribution.
+
+## Project Status
+Current Stage: Week 4 — ML Problem Definition & Data Understanding
+Status: In Progress
+The project will proceed to data preparation and model development in subsequent stages.
+Author
+Ojo Olaife Oluwaponmile
+Program: AnalystLab Africa — Machine Learning Internship
+Project: HealthConnect — Improving Patient Appointment Attendance and Healthcare Support Using Data and AI
 Machine Learning / Data Science Student
-Week 3 Machine Learning Internship Project
+Week 4  Machine Learning Internship Project
+
+https://drive.google.com/file/d/1kLBU6VsEy5RsQzm0HUcD15ANp897XcWe/view?usp=drivesdk
